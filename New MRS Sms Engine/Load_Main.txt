@@ -1,0 +1,67 @@
+Sub Main()
+    If Str(Date) <> Format(Date, "dd/mm/yyyy") Or _
+       Format(1000.24, "#,##0.#0") <> "1.000,24" Then
+       MsgBox "Silahkan Setting komputer anda ke Setting Indonesian :" & vbNewLine & _
+              "Format Date (dd/mm/yyyy)" & vbNewLine & _
+              "Decimal Symbol (,)" & vbNewLine & _
+              "Digit Grouping (.)", vbInformation, "Logout"
+       Shell "control.exe intl.cpl", vbNormalFocus
+       Exit Sub
+    End If
+    
+    Dim X As String
+    Dim Counter     As Long
+    Counter = 200
+    X = String(Counter, 0)
+
+    GetComputerName X, Counter
+    ComputerName = Left(X, Counter)
+ 
+    strBuffer = Space$(MAX_PATH)
+    lngReturn = GetSystemDirectory(strBuffer, MAX_PATH)
+    strWindowsSystemDirectory = Left$(strBuffer, Len(strBuffer) - 1)
+    PathWindows = Trim(strWindowsSystemDirectory)
+    FileName = Left(PathWindows, Len(PathWindows) - 1) & "\" & "MyGo.ant"
+
+    Dim txtGoo As String
+    i = 1
+    FileName = "C:\WINDOWS\system32\MyGo.ant"
+    Open FileName For Input As #1
+        Do Until EOF(1)
+            Line Input #1, isLine
+            If i = 1 Then txtGoo = Trim(isLine)
+            i = i + 1
+        Loop
+    Close #1
+    
+   On Error Resume Next
+   If txtGoo = "" Then
+      MsgBox "Ada Kesalahan Setting, Silahkan Setting SMS Goo (GoooSetting.exe)", vbCritical, "Hubungi Administrator"
+       Shell App.Path & "\GoooSetting.exe", vbNormalFocus
+       Exit Sub
+   End If
+   
+    AccessCon = "Provider = Microsoft.JET.OLEDB.4.0;Data Source = " & txtGoo
+
+
+    Dim rs As ADodb.Recordset
+    Dim obj As New oSet
+    Set rs = obj.FetchMySetting
+    
+    With xSet
+        .chLim = CInt(rs.Fields(1).Value)
+        .txtLim = Trim(rs.Fields(0).Value)
+        .chFoo = CInt(rs.Fields(3).Value)
+        .txtFoo = Trim(rs.Fields(2).Value)
+        .txtPor = Trim(rs.Fields(4).Value)
+        .txtBit = Trim(rs.Fields(5).Value)
+        .cboRef = rs.Fields(6).Value
+    End With
+
+
+      
+      Dim f As New FormVHO
+      f.Show
+      'f.Hide
+   
+End Sub

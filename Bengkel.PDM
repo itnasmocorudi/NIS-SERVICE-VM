@@ -1,0 +1,363 @@
+[Root]
+Most Recent Package=Setup Bengkel
+
+
+[Package|Bengkel|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\My Documents\budi
+
+[Package|Bengkel|Configure DAO ISAMs]
+Applicable=Yes
+Text=Yes
+Excel=Yes
+Lotus=Yes
+Xbase=Yes
+Paradox=Yes
+Exchange=Yes
+Jet 2.x=Yes
+
+[Package|Bengkel|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|Bengkel|Files Found]
+
+[Package|Bengkel|Files Released]
+
+[Package|Bengkel|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\MSEXCH35.DLL=
+C:\Program Files\ActiveReports\actrpt.dll=
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=
+C:\WINDOWS\SYSTEM\ActBar.ocx=
+C:\Program Files\Common Files\SYSTEM\ADO\MSADO20.TLB=
+C:\WINDOWS\SYSTEM\acak.dll=
+
+[Package|Bengkel|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=
+C:\WINDOWS\SYSTEM\MSBIND.DLL=
+
+[Package|Bengkel|Files Added]
+
+[Package|Bengkel|Files Removed]
+
+[Package|Bengkel|Files In Project]
+C:\WINDOWS\SYSTEM\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\olepro32.dll=Yes
+C:\WINDOWS\SYSTEM\asycfilt.dll=Yes
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Common Files\SYSTEM\ADO\MSADO20.TLB=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO2535.TLB=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\WINDOWS\SYSTEM\MSJet35.dll=Yes
+C:\WINDOWS\SYSTEM\MSJtEr35.dll=Yes
+C:\WINDOWS\SYSTEM\MSJInt35.dll=Yes
+C:\WINDOWS\SYSTEM\VBAJet32.dll=Yes
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=Yes
+C:\WINDOWS\SYSTEM\MSRD2x35.dll=Yes
+C:\WINDOWS\SYSTEM\MsRepl35.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINDOWS\SYSTEM\VB5DB.dll=Yes
+C:\WINDOWS\SYSTEM\xadb7.ocx=Yes
+C:\WINDOWS\SYSTEM\MSBIND.DLL=Yes
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=Yes
+C:\WINDOWS\SYSTEM\ActBar.ocx=Yes
+C:\WINDOWS\SYSTEM\MSMASK32.OCX=Yes
+C:\WINDOWS\SYSTEM\COMCTL32.OCX=Yes
+C:\WINDOWS\SYSTEM\tdbg7.ocx=Yes
+C:\WINDOWS\SYSTEM\tdbgpp7.dll=Yes
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=Yes
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=Yes
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=Yes
+C:\WINDOWS\SYSTEM\MSADODC.OCX=Yes
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\ActiveReports\actrpt.dll=Yes
+C:\WINDOWS\SYSTEM\MSEXCL35.DLL=Yes
+C:\WINDOWS\SYSTEM\MSEXCH35.DLL=Yes
+C:\WINDOWS\SYSTEM\MSLTUS35.DLL=Yes
+C:\WINDOWS\SYSTEM\MSRDO20.DLL=Yes
+C:\WINDOWS\SYSTEM\RDOCURS.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\WINDOWS\SYSTEM\MSPDOX35.DLL=Yes
+C:\WINDOWS\SYSTEM\MSTEXT35.DLL=Yes
+C:\WINDOWS\SYSTEM\MSXBSE35.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\My Documents\budi\Bengkel.exe=Yes
+C:\WINDOWS\SYSTEM\acak.dll=Yes
+
+[Package|Bengkel|Configure Registry Files]
+Applicable=No
+
+[Package|Bengkel|Configure Remote Servers]
+Applicable=No
+
+[Package|Bengkel|Install Locations]
+C:\My Documents\budi_temp\Bengkel.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Common Files\SYSTEM\ADO\MSADO20.TLB=$(WinSysPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO2535.TLB=$(MSDAOPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\SYSTEM\MSJet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSJtEr35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSJInt35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VBAJet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSRD2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MsRepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB5DB.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\xadb7.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\ActBar.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\tdbg7.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\tdbgpp7.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\Program Files\ActiveReports\actrpt.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSEXCL35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSEXCH35.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSLTUS35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSRDO20.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\RDOCURS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WINDOWS\SYSTEM\MSPDOX35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSTEXT35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSXBSE35.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\My Documents\budi\Bengkel.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\acak.dll=$(WinSysPath)
+
+[Package|Bengkel|Configure Shared Files]
+Applicable=Yes
+C:\My Documents\budi_temp\Bengkel.exe=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\My Documents\budi\Bengkel.exe=Yes
+
+[Package|Bengkel|Distribution]
+Type=single
+Size=
+Title=Sistem Informasi Bengkel
+
+[Package|Bengkel|IconGroups]
+Group0=Sistem Informasi Bengkel
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Bengkel|Sistem Informasi Bengkel]
+Icon1=Bengkel.exe
+Title1=Sistem Informasi Bengkel
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Bengkel|Package]
+PackageFolder=C:\My Documents\budi
+ProjectFolder=C:\My Documents\budi\Bengkel
+ServerSideCab=
+File1=C:\My Documents\budi\setup.exe
+File2=C:\My Documents\budi\Setup.Lst
+File3=C:\My Documents\budi\Bengkel.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Setup Bengkel|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\My Documents\budi\BengkelPack
+
+[Package|Setup Bengkel|Configure DAO ISAMs]
+Applicable=No
+Text=Yes
+Excel=Yes
+Lotus=Yes
+Xbase=Yes
+Paradox=Yes
+Exchange=Yes
+Jet 2.x=Yes
+
+[Package|Setup Bengkel|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|Setup Bengkel|Files Found]
+
+[Package|Setup Bengkel|Files Released]
+
+[Package|Setup Bengkel|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\MSEXCH35.DLL=
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=
+C:\WINDOWS\SYSTEM\acak.dll=
+C:\Program Files\ActiveReports\actrpt.dll=
+C:\WINDOWS\SYSTEM\ActBar.ocx=
+C:\Program Files\Common Files\SYSTEM\ADO\MSADO20.TLB=
+C:\WINDOWS\SYSTEM\actrpt.dll=
+C:\WINDOWS\SYSTEM\MSADO20.TLB=
+C:\Program Files\ActiveReports\Export\textexpt.dll=
+C:\Program Files\ActiveReports\arviewer.ocx=
+C:\WINDOWS\SYSTEM\textexpt.dll=
+C:\WINDOWS\SYSTEM\arviewer.ocx=
+
+[Package|Setup Bengkel|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=
+C:\WINDOWS\SYSTEM\MSBIND.DLL=
+C:\WINDOWS\SYSTEM\msmask32.ocx=
+
+[Package|Setup Bengkel|Files Added]
+
+[Package|Setup Bengkel|Files Removed]
+
+[Package|Setup Bengkel|Files In Project]
+C:\WINDOWS\SYSTEM\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM\OlePro32.dll=Yes
+C:\WINDOWS\SYSTEM\AsycFilt.dll=Yes
+C:\WINDOWS\SYSTEM\StdOle2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\xadb7.ocx=Yes
+C:\WINDOWS\SYSTEM\MSBIND.DLL=Yes
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=Yes
+C:\WINDOWS\SYSTEM\ActBar.ocx=Yes
+C:\WINDOWS\SYSTEM\acak.dll=Yes
+C:\WINDOWS\SYSTEM\MSMASK32.OCX=Yes
+C:\WINDOWS\SYSTEM\COMCTL32.OCX=Yes
+C:\WINDOWS\SYSTEM\tdbg7.ocx=Yes
+C:\WINDOWS\SYSTEM\tdbgpp7.dll=Yes
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=Yes
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=Yes
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=Yes
+C:\WINDOWS\SYSTEM\MSADODC.OCX=Yes
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=Yes
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\SYSTEM\actrpt.dll=Yes
+C:\My Documents\budi\Bengkel1.37\bengkel.exe=Yes
+C:\WINDOWS\SYSTEM\msado20.tlb=Yes
+C:\WINDOWS\SYSTEM\arviewer.ocx=Yes
+C:\WINDOWS\SYSTEM\textexpt.dll=Yes
+
+[Package|Setup Bengkel|Configure Registry Files]
+Applicable=No
+
+[Package|Setup Bengkel|Configure Remote Servers]
+Applicable=No
+
+[Package|Setup Bengkel|Install Locations]
+C:\My Documents\budi\Bengkel.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OlePro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\AsycFilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\StdOle2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Common Files\SYSTEM\ADO\MSADO20.TLB=$(WinSysPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\Dao2535.tlb=$(MSDAOPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\SYSTEM\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSJtEr35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSJInt35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VBAJet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSRD2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msrepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB5DB.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\xadb7.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\ActBar.ocx=$(WinSysPath)
+C:\Program Files\ActiveReports\actrpt.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\acak.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\tdbg7.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\tdbgpp7.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM\AS-IFce1.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSEXCL35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSEXCH35.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSLTUS35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSRDO20.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\RDOCURS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WINDOWS\SYSTEM\MSPDOX35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSTEXT35.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\MSXBSE35.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\My Documents\budi\Bengkel\Bengkel.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSADO20.TLB=$(WinSysPath)
+C:\WINDOWS\SYSTEM\actrpt.dll=$(WinSysPath)
+C:\My Documents\budi\Bengkel1.3\Bengkel.exe=$(AppPath)
+C:\Program Files\ActiveReports\arviewer.ocx=$(WinSysPath)
+C:\Program Files\ActiveReports\Export\textexpt.dll=$(WinSysPath)
+C:\My Documents\budi\Bengkel1.37\bengkel.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\arviewer.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\textexpt.dll=$(WinSysPath)
+
+[Package|Setup Bengkel|Configure Shared Files]
+Applicable=Yes
+C:\My Documents\budi\Bengkel.exe=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\My Documents\budi\Bengkel\Bengkel.exe=Yes
+C:\My Documents\budi\Bengkel1.3\Bengkel.exe=Yes
+C:\My Documents\budi\Bengkel1.37\bengkel.exe=Yes
+
+[Package|Setup Bengkel|Distribution]
+Type=single
+Size=
+Title=Sistem Informasi Bengkel
+
+[Package|Setup Bengkel|IconGroups]
+Group0=Sistem Informasi Bengkel
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Setup Bengkel|Sistem Informasi Bengkel]
+Icon1=Bengkel.exe
+Title1=Sistem Informasi Bengkel
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Setup Bengkel|Package]
+PackageFolder=C:\My Documents\budi\BengkelPack
+ProjectFolder=C:\My Documents\budi\Bengkel1.37
+ServerSideCab=
+File1=C:\My Documents\budi\BengkelPack\setup.exe
+File2=C:\My Documents\budi\BengkelPack\Setup.Lst
+File3=C:\My Documents\budi\BengkelPack\bengkel.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
