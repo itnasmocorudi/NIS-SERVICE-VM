@@ -1,0 +1,110 @@
+---------------------frmMain-----------------------------------
+RPLHistori     As Integer
+Log.RPLHistori = CInt(RsBengkel!RPLHistori)
+
+
+---------------------frmOrder---------------------------------
+cmdHistory_Click
+If Log.RPLHistori = 0 Then
+
+
+---------------------FRMHistory_new--------------------------------
+
+        If Log.RPLHistori = 1 Then
+            Call LoadDataReplikasi
+        Else
+            Call LoadDataHistory
+        End If
+        'Call LoadDataHistory
+
+Private Sub LoadDataReplikasi()
+    Dim nINV As String
+    Dim sqlStr As String
+    If OptH(0).value = True Then       'Service
+        Grid(0).Visible = True
+        sqlStr = "select distinct isNull(J.CATAT,'') as CATAT , D.DATE as Tanggal,D.NOINV,D.TOTAL as TotInv, D.NO_WO as NOWO, D.KM,D.FRONT as SA ,D.MECH ," _
+             & " REPLACE(REPLACE(REPLACE(D.REP1 + '; ' + D.REP2 + '; ' + D.REP3 + '; ' + D.REP4 + '; ' + D.REP5 + '; ' + D.REP6 + '; ' " _
+             & " + D.REP7,'; ;',''),'; ;',''),'; ;','') as JobOrder, D.REMARK1 as Pesan, D.SUGGEST as Saran, " _
+             & " D.REQ1 + '; ' + D.REQ2 + '; ' + D.REQ3 + '; ' + D.REQ4 + '; ' + D.REQ5 as Minta,D.FS_NM_DEALER as Dealer, " _
+             & " REPLACE(REPLACE(REPLACE(D.CMPL1 + '; ' + D.CMPL2 + '; ' + D.CMPL3 + '; ' + D.CMPL4 + '; ' + D.CMPL5 ,'; ;',''),'; ;',''),'; ;','') as Keluh from " _
+             & " [RPL]..T_INVOICENEW D WITH (NOLOCK) Left Join [RPL]..JobDTA J WITH (NOLOCK) On D.No_WO = J.NO_WO where D.NO_CHASSIS ='" & text(0).Caption & "' AND D.FS_LOG_DEL = '' order by D.DATE DESC, D.NOINV DESC, D.KM DESC"
+        Set rsX = objO.FetchData(sqlStr)
+        If rsX.EOF Then Exit Sub
+        Set Grid(0).DataSource = rsX
+    ElseIf OptH(1).value = True Then   'Part
+        Grid(1).Visible = True
+        createTablePart True
+        sqlStr = "select [Date] as Tanggal, A.NoInv, A.no_wo as NOWO, KODEITEM, Keterangan, QTY " & _
+                 "from [RPL]..historynew as A WITH (NOLOCK) inner join [RPL]..t_partnew as B WITH (NOLOCK) on A.NO_WO = B.NO_WO and A.NOINV = Replace(Replace(B.NOINV,'-A',''),'-B','') and B.FS_LOG_DEL = '' " & _
+                 "where NO_CHASSIS = '" & text(0).Caption & "' and B.NOINV <> '' and A.FS_LOG_DEL = '' order by [DATE] DESC, KODEITEM"
+        Set rsXp = objO.FetchData(sqlStr)
+        If rsXp.RecordCount > 0 Then
+            rsXp.MoveFirst
+            nINV = ""
+            Do Until rsXp.EOF
+                If Trim(rsXp.Fields(1).value) <> nINV Then
+                    rsP.AddNew
+                    ''2016-09-22 || penambahan format tanggal pada result value
+                    rsP!tanggal = Format(rsXp.Fields(0).value, "dd/mm/yyyy")
+                    ''rsP!Tanggal = rsXp.Fields(0).value
+                    rsP!noInv = rsXp.Fields(1).value
+                    rsP!noWO = rsXp.Fields(2).value
+                    rsP!kodePart = rsXp.Fields(3).value
+                    rsP!namaPart = rsXp.Fields(4).value
+                    rsP!qty = Val(rsXp.Fields(5).value)
+                Else
+                    rsP.AddNew
+                    rsP!tanggal = ""
+                    rsP!noInv = ""
+                    rsP!noWO = ""
+                    rsP!kodePart = rsXp.Fields(3).value
+                    rsP!namaPart = rsXp.Fields(4).value
+                    rsP!qty = Val(rsXp.Fields(5).value)
+                End If
+                rsP.Update
+                If Not rsXp.EOF Then nINV = Trim(rsXp.Fields(1).value)
+                rsXp.MoveNext
+            Loop
+        End If
+        Set Grid(1).DataSource = rsP
+    ElseIf OptH(2).value = True Then   'Sublet
+        Grid(2).Visible = True
+        CreateTableSublet True
+        sqlStr = "SELECT [DATE], A.NOINV, A.NO_WO, SBLT, NAMABARANG, QTY, HARGA FROM [RPL]..historynew A WITH (NOLOCK) " & _
+                 "INNER JOIN [RPL]..HIST_SUBLETNEW B WITH (NOLOCK) ON A.no_wo = B.no_wo and A.NOINV = Replace(Replace(B.NOINV,'-A',''),'-B','') AND A.FS_LOG_DEL = '' " & _
+                 "WHERE A.NO_CHASSIS = '" & text(0).Caption & "' AND B.noinv <> '' order by [DATE] DESC, KODEITEM"
+        
+        Set rsXs = objO.FetchData(sqlStr)
+        If rsXs.RecordCount > 0 Then
+            rsXs.MoveFirst
+            nINV = ""
+            Do Until rsXs.EOF
+                If Trim(rsXs.Fields(1).value) <> nINV Then
+                    rsS.AddNew
+                    ''2016-09-22 || penambahan format tanggal pada result value
+                    rsS!tanggal = Format(rsXs.Fields(0).value, "dd/mm/yyyy")
+'                    rsS!Tanggal = rsXs.Fields(0).value
+                    rsS!noInv = rsXs.Fields(1).value
+                    rsS!noWO = rsXs.Fields(2).value
+                    rsS!total = rsXs.Fields(3).value
+                    rsS!SUBLET = rsXs.Fields(4).value
+                    rsS!qty = Val(rsXs.Fields(5).value)
+                    rsS!Harga = Val(rsXs.Fields(6).value)
+                Else
+                    rsS.AddNew
+                    rsS!tanggal = ""
+                    rsS!noInv = ""
+                    rsS!noWO = ""
+                    rsS!total = ""
+                    rsS!SUBLET = rsXs.Fields(4).value
+                    rsS!qty = Val(rsXs.Fields(5).value)
+                    rsS!Harga = Val(rsXs.Fields(6).value)
+                End If
+                rsS.Update
+                If Not rsXs.EOF Then nINV = Trim(rsXs.Fields(1).value)
+                rsXs.MoveNext
+            Loop
+        End If
+        Set Grid(2).DataSource = rsS
+    End If
+End Sub

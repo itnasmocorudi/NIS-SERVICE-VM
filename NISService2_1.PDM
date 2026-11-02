@@ -1,0 +1,196 @@
+[Root]
+Most Recent Package=Setup NIS Service 2
+
+[Package|Setup NIS Service 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Source Code\New NIS Bengkel 2.2.0 Edit Inv Pisah\Package
+
+[Package|Setup NIS Service 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Setup NIS Service 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Setup NIS Service 2|Files Found]
+
+[Package|Setup NIS Service 2|Files Released]
+
+[Package|Setup NIS Service 2|Missing Dependency Information]
+C:\WINDOWS\system32\ccrpftv6.ocx=
+C:\WINDOWS\system32\XPButton.ocx=
+C:\WINDOWS\system32\AS-IFce1.ocx=
+C:\WINDOWS\system32\sqldmo.dll=
+C:\WINDOWS\system32\Str2Bit.dll=
+C:\WINDOWS\system32\craxdrt.dll=
+C:\WINDOWS\system32\craxddrt.dll=
+C:\WINDOWS\system32\actrpt.dll=
+C:\WINDOWS\system32\arviewer.ocx=
+C:\WINDOWS\system32\textexpt.dll=
+C:\WINDOWS\system32\crviewer.dll=
+C:\WINDOWS\system32\ActBar.ocx=
+C:\WINDOWS\system32\Actbar2.ocx=
+C:\WINDOWS\system32\sviewhlp.dll=
+C:\WINDOWS\system32\acak.dll=
+
+[Package|Setup NIS Service 2|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\RICHTX32.OCX=
+C:\WINDOWS\system32\MSCHRT20.OCX=
+C:\WINDOWS\system32\mscomctl.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\tdbgpp7.dll=
+C:\WINDOWS\system32\todgub7.dll=
+C:\WINDOWS\system32\todg7.ocx=
+C:\WINDOWS\system32\MSADODC.OCX=
+C:\WINDOWS\system32\MSDATGRD.OCX=
+C:\WINDOWS\system32\msmask32.ocx=
+C:\WINDOWS\system32\MSCOMCT2.OCX=
+C:\WINDOWS\system32\MSFLXGRD.OCX=
+C:\WINDOWS\system32\tabctl32.ocx=
+C:\WINDOWS\system32\MSSTDFMT.DLL=
+C:\WINDOWS\system32\MSBIND.DLL=
+
+[Package|Setup NIS Service 2|Files Added]
+
+[Package|Setup NIS Service 2|Files Removed]
+d:\source code\new nis bengkel 2.2.0 edit inv pisah\nis service 2.1.9_2.exe=
+
+[Package|Setup NIS Service 2|Files In Project]
+D:\Source Code\New NIS Bengkel 2.2.0 Edit Inv Pisah\NIS Service 2.1.9_2.exe=No
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\acak.dll=Yes
+C:\WINDOWS\system32\timask6.ocx=Yes
+C:\WINDOWS\system32\tishare6.dll=Yes
+C:\WINDOWS\system32\tibase6.dll=Yes
+C:\WINDOWS\system32\xadb7.ocx=Yes
+C:\WINDOWS\system32\sviewhlp.dll=Yes
+C:\WINDOWS\system32\Actbar2.ocx=Yes
+C:\WINDOWS\system32\ActBar.ocx=Yes
+C:\WINDOWS\system32\crviewer.dll=Yes
+C:\WINDOWS\system32\MSBIND.DLL=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\textexpt.dll=Yes
+C:\WINDOWS\system32\arviewer.ocx=Yes
+C:\WINDOWS\system32\actrpt.dll=Yes
+C:\WINDOWS\system32\craxddrt.dll=Yes
+C:\WINDOWS\system32\craxdrt.dll=Yes
+C:\WINDOWS\system32\tidate6.ocx=Yes
+C:\WINDOWS\system32\tinumb6.ocx=Yes
+C:\WINDOWS\system32\MSDBRPTR.DLL=Yes
+C:\Program Files\Common Files\Designer\MSDERUN.DLL=Yes
+C:\WINDOWS\system32\Str2Bit.dll=Yes
+C:\WINDOWS\system32\sqldmo.dll=Yes
+C:\WINDOWS\system32\tabctl32.ocx=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\msmask32.ocx=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\system32\MSADODC.OCX=Yes
+C:\WINDOWS\system32\AS-IFce1.ocx=Yes
+C:\WINDOWS\system32\todg7.ocx=Yes
+C:\WINDOWS\system32\todgub7.dll=Yes
+C:\WINDOWS\system32\tdbgpp7.dll=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\tdbg7.ocx=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\mscomctl.ocx=Yes
+C:\WINDOWS\system32\MSCHRT20.OCX=Yes
+C:\WINDOWS\system32\XPButton.ocx=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\Crystl32.OCX=Yes
+C:\WINDOWS\system32\crpe32.dll=Yes
+C:\WINDOWS\system32\ccrpftv6.ocx=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Setup NIS Service 2|Configure Registry Files]
+Applicable=No
+
+[Package|Setup NIS Service 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Setup NIS Service 2|Install Locations]
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\acak.dll=$(WinSysPath)
+C:\WINDOWS\system32\timask6.ocx=$(WinSysPath)
+C:\WINDOWS\system32\tishare6.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\tibase6.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\xadb7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\sviewhlp.dll=$(WinSysPath)
+C:\WINDOWS\system32\Actbar2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\ActBar.ocx=$(WinSysPath)
+C:\WINDOWS\system32\crviewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\textexpt.dll=$(WinSysPath)
+C:\WINDOWS\system32\arviewer.ocx=$(WinSysPath)
+C:\WINDOWS\system32\actrpt.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\tidate6.ocx=$(WinSysPath)
+C:\WINDOWS\system32\tinumb6.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\Program Files\Common Files\Designer\MSDERUN.DLL=$(CommonFiles)\designer
+C:\WINDOWS\system32\Str2Bit.dll=$(WinSysPath)
+C:\WINDOWS\system32\sqldmo.dll=$(AppPath)
+C:\WINDOWS\system32\tabctl32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINDOWS\system32\msmask32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\system32\AS-IFce1.ocx=$(WinSysPath)
+C:\WINDOWS\system32\todg7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\todgub7.dll=$(WinSysPath)
+C:\WINDOWS\system32\tdbgpp7.dll=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\tdbg7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINDOWS\system32\XPButton.ocx=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\ccrpftv6.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Setup NIS Service 2|Configure Shared Files]
+Applicable=Yes
+C:\WINDOWS\system32\sqldmo.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Setup NIS Service 2|Distribution]
+Type=single
+Size=
+Title=NIS Service 2
+
+[Package|Setup NIS Service 2|IconGroups]
+Group0=NIS Service 2
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Setup NIS Service 2|NIS Service 2]
+Icon1="NIS Service 2.1.9_2.exe"
+Title1=NIS Service 2
+StartIn1=$(AppPath)
+Key1=Icon1
