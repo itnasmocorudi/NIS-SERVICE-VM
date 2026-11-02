@@ -2778,3 +2778,4 @@ Private Sub tblSimpan_Click()
         Call Simpan_OK
     End If
 End Sub
+''20261102 penambahan ndog
