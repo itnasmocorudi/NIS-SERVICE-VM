@@ -999,7 +999,7 @@ Private Sub cmdApprove_Click()
 110                   sSQL = sSQL + "'O','" & rsGrid!ReqCode & "',"
 111                   sSQL = sSQL + "'0','SV',"
 112                   sSQL = sSQL + "'','TMS-" & rsGrid!KodeItem & "',"
-113                   sSQL = sSQL + "" & k2t(rsGrid!hargaJual) * k2t(rsGrid!QtySupply) & ",0,"
+113                   sSQL = sSQL + "" & Round((rsGrid!HPokokAkhir)) * k2t(rsGrid!QtySupply) & ",0,"
 114                   sSQL = sSQL + "'" & gSA & "','" & delIndex & "',"
 115                   sSQL = sSQL + " GetDate())"
                      
@@ -1013,7 +1013,7 @@ Private Sub cmdApprove_Click()
 121                   sSQL = sSQL + "'O','" & rsGrid!ReqCode & "',"
 122                   sSQL = sSQL + "'0','SV',"
 123                   sSQL = sSQL + "'','TMS-" & rsGrid!KodeItem & "',"
-124                   sSQL = sSQL + "0," & k2t(rsGrid!hargaJual) * k2t(rsGrid!QtySupply) & ","
+124                   sSQL = sSQL + "0," & Round(rsGrid!HPokokAkhir) * k2t(rsGrid!QtySupply) & ","
 125                   sSQL = sSQL + "'" & gSA & "','" & delIndex & "',"
 126                   sSQL = sSQL + " GetDate())"
                      
@@ -1273,7 +1273,7 @@ Private Sub refreshGrid()
     Dim porsiInsentif As Double
     ''sSQL = "SELECT KDSUPP,SUPPLIER,ALAMAT1,ALAMAT2,KOTA,TELPON,CP,KETERANGAN,KDDEALER,PKP,NONJURNAL FROM [" & dbReplikasiHO & "]..MSTSUPPLIER WITH (NOLOCK) WHERE FS_LOG_DEL = '' ORDER BY KDDEALER "
    ' If NulSID(cbJenis.Text) = NulSID("Part") Then
-        sSQL = "select ReqCode,KodeItem,NamaBarang,KodeSatuan,HargaJual,QtyOrder,QtySupply,KodeTMS from reqpart where [Status] = 1"
+        sSQL = "select ReqCode,KodeItem,NamaBarang,KodeSatuan,HPokokAkhir,HargaJual,QtyOrder,QtySupply,KodeTMS from reqpart where [Status] = 1"
     'Else
     '    sSQL = "Select KdMP,NIK,Nama,NoInv,No_WO,KdItem,NamaItem,Qty,Diskon,AllowDiskon,AlokasiIns from  INSENTIF.dbo.GRInsProdukTersedia where KategoriItem = 'Sublet' and Periode = '" & Format(Periode.value, "MM-YYYY") & "' and FS_KD_DEALER = '" & NulSID(gKdCbg) & "'"
     'End If
@@ -1287,7 +1287,7 @@ Private Sub refreshGrid()
         DoEvents
         progBar.Min = 1
         progBar.Max = rsTemp.RecordCount + 1
-        
+       
         Do While Not rsTemp.EOF
             With rsGrid
                 .AddNew
@@ -1296,8 +1296,9 @@ Private Sub refreshGrid()
                 !KodeItem = NulSID(rsTemp!KodeItem)
                 !NamaBarang = NulSID(rsTemp!NamaBarang)
                 !KODESATUAN = NulSID(rsTemp!KODESATUAN)
+                !HPokokAkhir = k2t(rsTemp!HPokokAkhir)
                 !hargaJual = k2t(rsTemp!hargaJual)
-                !QtyOrder = k2t(rsTemp!QtyOrder)
+                 !QtyOrder = k2t(rsTemp!QtyOrder)
                 !QtySupply = k2t(rsTemp!QtySupply)
                 !KodeTMS = NulSID(rsTemp!KodeTMS)
                 .Update
@@ -1328,6 +1329,8 @@ Private Sub createRS()
         .Fields.Append "QtyOrder", adDouble
         .Fields.Append "QtySupply", adDouble
         .Fields.Append "KodeTMS", adVarChar, 100
+        .Fields.Append "HPokokAkhir", adDouble
+        
         .Open
     End With
 End Sub

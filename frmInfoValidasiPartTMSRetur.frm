@@ -996,7 +996,7 @@ Private Sub cmdApprove_Click()
 111                   sSQL = sSQL + "'O','" & rsGrid!ReturCode & "',"
 112                   sSQL = sSQL + "'0','SV',"
 113                   sSQL = sSQL + "'','TMS-" & rsGrid!KodeItem & "',"
-114                   sSQL = sSQL + "" & k2t(rsGrid!hargaJual) * k2t(rsGrid!QtySupply) & ",0,"
+114                   sSQL = sSQL + "" & Round(rsGrid!HPokokAkhir) * k2t(rsGrid!QtySupply) & ",0,"
 115                   sSQL = sSQL + "'" & gSA & "','" & delIndex & "',"
 116                   sSQL = sSQL + " GetDate())"
                      
@@ -1010,7 +1010,7 @@ Private Sub cmdApprove_Click()
 122                   sSQL = sSQL + "'O','" & rsGrid!ReturCode & "',"
 123                   sSQL = sSQL + "'0','SV',"
 124                   sSQL = sSQL + "'','TMS-" & rsGrid!KodeItem & "',"
-125                   sSQL = sSQL + "0," & k2t(rsGrid!hargaJual) * k2t(rsGrid!QtySupply) & ","
+125                   sSQL = sSQL + "0," & Round(rsGrid!HPokokAkhir) * k2t(rsGrid!QtySupply) & ","
 126                   sSQL = sSQL + "'" & gSA & "','" & delIndex & "',"
 127                   sSQL = sSQL + " GetDate())"
                      
@@ -1270,7 +1270,7 @@ Private Sub refreshGrid()
           Dim porsiInsentif As Double
           ''sSQL = "SELECT KDSUPP,SUPPLIER,ALAMAT1,ALAMAT2,KOTA,TELPON,CP,KETERANGAN,KDDEALER,PKP,NONJURNAL FROM [" & dbReplikasiHO & "]..MSTSUPPLIER WITH (NOLOCK) WHERE FS_LOG_DEL = '' ORDER BY KDDEALER "
          ' If NulSID(cbJenis.Text) = NulSID("Part") Then
-2             sSQL = "select ReturCode,KodeItem,NamaBarang,KodeSatuan,HargaJual,QtyRetur,QtyApproved,KodeTMS from ReturPart where [Status] = 1"
+2             sSQL = "select HPokokAkhir,ReturCode,KodeItem,NamaBarang,KodeSatuan,HargaJual,QtyRetur,QtyApproved,KodeTMS from ReturPart where [Status] = 1"
           'Else
           '    sSQL = "Select KdMP,NIK,Nama,NoInv,No_WO,KdItem,NamaItem,Qty,Diskon,AllowDiskon,AlokasiIns from  INSENTIF.dbo.GRInsProdukTersedia where KategoriItem = 'Sublet' and Periode = '" & Format(Periode.value, "MM-YYYY") & "' and FS_KD_DEALER = '" & NulSID(gKdCbg) & "'"
           'End If
@@ -1294,22 +1294,23 @@ Private Sub refreshGrid()
 17                    !NamaBarang = NulSID(rsTemp!NamaBarang)
 18                    !KODESATUAN = NulSID(rsTemp!KODESATUAN)
 19                    !hargaJual = k2t(rsTemp!hargaJual)
-20                    !QtyOrder = k2t(rsTemp!QtyRetur)
-21                    !QtySupply = k2t(rsTemp!QtyApproved)
-22                    !KodeTMS = NulSID(rsTemp!KodeTMS)
-23                    .Update
-24                End With
+20                    !HPokokAkhir = k2t(rsTemp!HPokokAkhir)
+21                    !QtyOrder = k2t(rsTemp!QtyRetur)
+22                    !QtySupply = k2t(rsTemp!QtyApproved)
+23                    !KodeTMS = NulSID(rsTemp!KodeTMS)
+24                    .Update
+25                End With
                   
-25                progBar.value = iProgress
-26                iProgress = iProgress + 1
-27                DoEvents
+26                progBar.value = iProgress
+27                iProgress = iProgress + 1
+28                DoEvents
                   
-28                rsTemp.MoveNext
-29            Loop
-30            isLoad = True
-31        End If
-32        progBar.Visible = False
-33        Set GridSupplier.DataSource = rsGrid
+29                rsTemp.MoveNext
+30            Loop
+31            isLoad = True
+32        End If
+33        progBar.Visible = False
+34        Set GridSupplier.DataSource = rsGrid
 End Sub
 
 Private Sub createRS()
@@ -1325,6 +1326,7 @@ Private Sub createRS()
         .Fields.Append "QtyOrder", adDouble
         .Fields.Append "QtySupply", adDouble
         .Fields.Append "KodeTMS", adVarChar, 100
+        .Fields.Append "HPokokAkhir", adDouble
         .Open
     End With
 End Sub
